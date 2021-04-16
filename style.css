@@ -1,0 +1,131 @@
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.89);
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.coded {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: right;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+/* display */
+.calculator-display {
+    background: black;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1{
+    margin: 0;
+    padding: 25px;
+    font-size: 50px;
+    /* font-family: 'Lucida Console', sans-serif; */
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+  }
+
+/* Buttons */
+.calculator-buttons {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-gap: 10px;
+ padding: 10px;
+}
+
+button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background:rgb(199, 199, 199);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button:focus {
+    outline: none;
+}
+
+.operator {
+    background: grey;
+    color: white;
+    font-size: 30px;
+}
+
+.clear {
+    background: linear-gradient(to right, #ed213a, #93291e);
+    color: white;
+}
+
+.clear:hover {
+    filter: brightness(90%);
+}
+
+.equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: linear-gradient(to right, #7b4397, #dc2430);
+}
+
+.equal-sign:hover {
+    filter: brightness(120%);
+}
+
+
+/* Media Query: Large smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+    .calculator{
+        width: 95%;
+    }
+}
+
