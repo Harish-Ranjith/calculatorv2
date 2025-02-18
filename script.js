@@ -44,7 +44,7 @@ function useOperator(operator) {
 // Evaluates the expression
 function evaluateExpression() {
     // Parse float function to convert the current string display to a floating point value for further calculations
-    const displayArray = expression.split(/([+\-*/])/);
+    const displayArray = expression.split(/([+\-*/])/); //regex to match the operators
     let result = parseFloat(displayArray[0]);
 
     for (let i = 1; i < displayArray.length; i += 2) {
