@@ -43,6 +43,7 @@ function useOperator(operator) {
 
 // Evaluates the expression
 function evaluateExpression() {
+    // Parse float function to convert the current string display to a floating point value for further calculations
     const displayArray = expression.split(/([+\-*/])/);
     let result = parseFloat(displayArray[0]);
 
