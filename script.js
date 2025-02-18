@@ -43,12 +43,12 @@ function useOperator(operator) {
 
 // Evaluates the expression
 function evaluateExpression() {
-    const expressionArray = expression.split(/([+\-*/])/);
-    let result = parseFloat(expressionArray[0]);
+    const displayArray = expression.split(/([+\-*/])/);
+    let result = parseFloat(displayArray[0]);
 
-    for (let i = 1; i < expressionArray.length; i += 2) {
-        const operator = expressionArray[i];
-        const nextValue = parseFloat(expressionArray[i + 1]);
+    for (let i = 1; i < displayArray.length; i += 2) {
+        const operator = displayArray[i];
+        const nextValue = parseFloat(displayArray[i + 1]);
         result = calculate[operator](result, nextValue);
     }
 
